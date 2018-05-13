@@ -1,4 +1,4 @@
-<h1>ユーザー一覧</h1>
+<h1>ポスト一覧</h1>
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead>
@@ -13,7 +13,6 @@
     </thead>
     <tbody>
       <% @posts.each do |post| %>
-    
         <tr>
           <td><div class="text-center"><%= post.title %></div></td>
           <td><div class="text-center"><%= post.content %></div></td>
