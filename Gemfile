@@ -27,6 +27,8 @@ gem 'omniauth-twitter'
 gem 'devise-bootstrap-views'
 # .env から環境変数を読み込み
 gem 'dotenv-rails'
+# 住所から経度、緯度を取得
+gem 'geocoder'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
