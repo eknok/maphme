@@ -11,3 +11,18 @@
  * It is generally better to create a new file per style scope.
  */
 @import "bootstrap";
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.navbar {
+  padding: 8px 100px;
+}
+
+.container {
+   margin: 20px 40px;
+   padding: 20px 60px;
+ }
+ 
