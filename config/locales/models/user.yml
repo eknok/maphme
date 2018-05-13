@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        username: '名前'
+        email: 'Email'
+  users:
+  remember_me: 'ログインを記憶する'
+  back: '戻る'
