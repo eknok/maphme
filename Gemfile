@@ -14,6 +14,19 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# jquery
+gem 'jquery-rails'
+# bootstrap5
+gem 'bootstrap'
+# devise
+gem 'devise'
+# ツイッター認証
+gem 'omniauth'
+gem 'omniauth-twitter'
+# devise for bootstrap
+gem 'devise-bootstrap-views'
+# .env から環境変数を読み込み
+gem 'dotenv-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -39,6 +52,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'letter_opener_web'
 end
 
 group :development do
