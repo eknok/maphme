@@ -4,5 +4,5 @@
   <h4><%= @post.content %></h4>
   <%= image_tag @post.picture.url if @post.picture? %>
   <p><%= link_to '編集', edit_post_path %></p>
-  <p><%= link_to '削除', post_path(id: @post), method: 'delete' %></p>
+  <p><%= link_to '削除', post_path(id: @post), method: 'delete', data: { comfirm: '本当に削除しますか？' } %></p>
 </div>
