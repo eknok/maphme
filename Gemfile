@@ -29,6 +29,10 @@ gem 'devise-bootstrap-views'
 gem 'dotenv-rails'
 # 住所から経度、緯度を取得
 gem 'geocoder'
+# 画像アップローダー
+gem 'carrierwave'
+# 画像をリサイズ
+gem 'mini_magick'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -68,3 +72,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :production do
+  # 本番環境 postgre
+  gem 'pg'
+  # 本番環境 画像アップローダー
+  gem 'fog'
+end
