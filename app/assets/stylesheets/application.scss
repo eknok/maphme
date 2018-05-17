@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  margin: 40px;
+  margin: 25px;
 }
 
 .navbar {
@@ -46,9 +46,10 @@ input {
  margin: 10px;
 }
 
-.map {
-  width: 600px;
-  height: 600px;
-  border: 1px solid red;
-  margin: 0
+div.map {
+  background-color: #E0FFFF;
+  opacity: 0.8;
+  border: 3px solid gray;
+  margin: 0;
+  padding: 0;
 }
