@@ -1,0 +1,27 @@
+<h1>ポスト一覧</h1>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>コンテンツ</th>
+        <th>ユーザー</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><div class="text-center"><%= post.title %></div></td>
+          <td><div class="text-center"><%= post.content %></div></td>
+          <td><div class="text-center"><%= post.user.username %></div></td>
+          <td><div class="text-center"></div></td>
+          <td><div class="text-center"></div></td>
+          <td><div class="text-center"></div></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

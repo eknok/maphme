@@ -1,2 +1,244 @@
-<h1>Top#about</h1>
-<p>Find me in app/views/top/about.html.erb</p>
+<style>
+
+.background {
+  fill: none;
+  pointer-events: all;
+
+}
+
+.feature {
+  fill: #ccc;
+  cursor: pointer;
+}
+
+.place-label {
+  fill: #444;
+}
+
+text {
+  pointer-events: none;
+}
+
+.feature.active {
+  fill: orange;
+}
+
+.mesh {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flickr-link {
+  display: inline-block;
+}
+</style>
+<div class="row">
+  <div class="map col-md-6.5">
+    <div class="something">
+      <p>選択してください</p>
+    </div>
+
+    <script>
+
+    var width = 600,
+        height = 600,
+        active = d3.select(null);
+
+    var projection = d3.geo.mercator()
+        .scale(1200)
+        .center([145.467551, 37.750299]);
+
+
+    var zoom = d3.behavior.zoom()
+        .translate([0, 0])
+        .scale(1)
+        .scaleExtent([1, 8])
+        .on("zoom", zoomed);
+
+    var path = d3.geo.path()
+        .projection(projection);
+
+    var svg = d3.select(".map").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr()
+        .on("click", stopped, true);
+
+    svg.append("rect")
+        .attr("class", "background")
+        .attr("width", width)
+        .attr("height", height)
+        .on("click", reset);
+
+    var g = svg.append("g");
+
+
+    d3.json("<%= asset_path('japan.json') %>", function(error, regions) {
+      if (error) throw error;
+
+      g.selectAll("path")
+          .data(topojson.feature(regions, regions.objects.japan).features)
+        .enter().append("path")
+          .attr("d", path)
+          .attr("class", "feature")
+          .on("click", clicked)
+
+      g.append("path")
+          .datum(topojson.mesh(regions, regions.objects.japan, function(a, b) { return a !== b; }))
+          .attr("class", "mesh")
+          .attr("d", path);
+
+    });
+
+    function clicked(d) {
+      if (active.node() === this) return reset();
+      active.classed("active", false);
+      active = d3.select(this).classed("active", true);
+
+      var myh1 = document.getElementById("photo");
+      myh1.innerHTML = "";
+
+      // 都道府県の取得
+      var prop = d.properties;
+      var string = prop.nam_ja;
+      var eng_string = prop.nam;
+
+      d3.select(".something")
+              .html("")
+              .append("text")
+              .html(string)
+
+      // Flickr API key
+      // var apiKey = ENV["FLICKR_API_KEY"];
+      var apiKey = '3e621e0b7db7f56db442679c29ce9244';
+
+      // photoオブジェクトから画像のURLを作成して返す
+      function getFlickrImageURL(photo, size) {
+      var url = "https://farm" + photo.farm + ".staticflickr.com/"
+        + photo.server + "/" + photo.id + "_" + photo.secret;
+      if (size) { // サイズ指定ありの場合
+        url += "_" + size;
+      }
+      url += ".jpg";
+      return url;
+      }
+
+      // photoオブジェクトからページのURLを作成して返す
+      function getFlickrPageURL(photo) {
+      return "https://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
+      }
+
+      // photoオブジェクトからaltテキストを生成して返す
+      function getFlickrText(photo) {
+      var text = '"' + photo.title + '" by ' + photo.ownername;
+      return text;
+      }
+
+      $(function() {
+      var parameters =  $.param({
+        method: "flickr.photos.search",
+        api_key: apiKey,
+        text: eng_string,// 検索テキスト
+        sort: 'interestingness-desc', // 興味深さ順
+        per_page: 24, // 取得件数
+        extras: "owner_name",// 追加で取得する情報
+        format: "json", // レスポンスをJSON形式に
+        nojsoncallback: 1, // レスポンスの先頭に関数呼び出しを含めない
+      });
+      var flickr_url = "https://api.flickr.com/services/rest/?" + parameters;
+      console.log(flickr_url);
+      // 猫の画像を検索して表示
+      $.getJSON(flickr_url, function(data){
+        console.log(data);
+        if (data.stat == "ok") {
+          // 空の<div>を作る
+          var $div = $("<div>");
+
+          // 県名
+          $div.append(string + "<br>");
+
+          for (var i = 0; i < data.photos.photo.length; i++) {
+            var photo = data.photos.photo[i];
+            var photoText = getFlickrText(photo);
+
+            // $divに <a href="..." ...><img src="..." ...></a> を追加する
+            $div.append(
+              $("<a>", {
+                href: getFlickrPageURL(photo),
+                "class": "flickr-link",
+                "target": "_blank",     // リンクを新規タブで開く
+                "data-toggle": "tooltip",
+                "data-placement": "bottom",
+                title: photoText,
+              }).append($("<img>", {
+                src: getFlickrImageURL(photo, "q"),
+                width: 150,
+                height: 150,
+                alt: photoText,
+              }))
+              $("<form>", {
+                
+              })
+            );
+          }          // $divを.photoに追加する
+          $div.appendTo("#photo");
+
+          // // BootstrapのTooltipを適用
+          // $("[data-toggle='tooltip']").tooltip();
+        }
+      });
+      });
+
+      var bounds = path.bounds(d),
+          dx = bounds[1][0] - bounds[0][0],
+          dy = bounds[1][1] - bounds[0][1],
+          x = (bounds[0][0] + bounds[1][0]) / 2,
+          y = (bounds[0][1] + bounds[1][1]) / 2,
+          scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height))),
+          translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+      svg.transition()
+          .duration(750)
+          .call(zoom.translate(translate).scale(scale).event);
+    }
+
+    function reset() {
+      active.classed("active", false);
+      active = d3.select(null);
+
+      var string = "選択してください"
+      d3.select(".something")
+              .html("")
+              .append("text")
+              .html(string)
+
+      svg.transition()
+          .duration(750)
+          .call(zoom.translate([0, 0]).scale(1).event);
+
+      // // var $div = ""
+      // // $div.appendTo("#photo");
+        var myh1 = document.getElementById('photo');
+        myh1.innerHTML = "";
+
+    }
+
+    function zoomed() {
+      g.style("stroke-width", 1.5 / d3.event.scale + "px");
+      g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    }
+
+    function stopped() {
+      if (d3.event.defaultPrevented) d3.event.stopPropagation();
+    }
+
+    </script>
+  </div>
+    <div id="photo" class="col-md-5">
+
+    </div>
+  </div>
+
+<a href="/posts" name="post[:content]" method='post'>test link</a>

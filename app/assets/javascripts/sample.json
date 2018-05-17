@@ -1,0 +1,27 @@
+{"type": "日本酒","region":
+  {"name": "北海道", "city":
+    {"campany": "田中酒造", "name":"小樽市", "details": [
+      {"name":"小樽の貴醸酒", "kana_name": "おたるのきじょうしゅ"},
+      {"name":"亀甲蔵大吟醸", "kana_name": "きっこうぐらだいぎんじょう"},
+      {"name":"寳川", "kana_name": "たからがわ"},
+      {"name":"七年貯熟古酒", "kana_name": "しちねんちょじゅくこしゅ"}]}
+    {"campany": "田中酒造", "name":"小樽市", "details": [
+       {"name":"小樽の貴醸酒", "kana_name": "おたるのきじょうしゅ"},
+       {"name":"亀甲蔵大吟醸", "kana_name": "きっこうぐらだいぎんじょう"},
+       {"name":"寳川", "kana_name": "たからがわ"},
+       {"name":"七年貯熟古酒", "kana_name": "しちねんちょじゅくこしゅ"}
+    ]},
+  },
+  {"name": "北海道", "city":
+    {"campany": "田中酒造", "name":"小樽市", "details": [
+      {"name":"小樽の貴醸酒", "kana_name": "おたるのきじょうしゅ"},
+      {"name":"亀甲蔵大吟醸", "kana_name": "きっこうぐらだいぎんじょう"},
+      {"name":"寳川", "kana_name": "たからがわ"},
+      {"name":"七年貯熟古酒", "kana_name": "しちねんちょじゅくこしゅ"}]}
+    {"campany": "田中酒造", "name":"小樽市", "details": [
+       {"name":"小樽の貴醸酒", "kana_name": "おたるのきじょうしゅ"},
+       {"name":"亀甲蔵大吟醸", "kana_name": "きっこうぐらだいぎんじょう"},
+       {"name":"寳川", "kana_name": "たからがわ"},
+       {"name":"七年貯熟古酒", "kana_name": "しちねんちょじゅくこしゅ"}
+      ]},
+}
