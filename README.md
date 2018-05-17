@@ -9,3 +9,8 @@
 - Rails
 - bootstrap
 - Javascript
+- D3.js
+
+# めも
+Herokuはまだ
+`/about`は動いた
