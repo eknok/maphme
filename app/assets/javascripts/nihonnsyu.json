@@ -3,38 +3,14 @@
       {"name":"小樽の貴醸酒","kana_name":"おたるのきじょうしゅ"},
       {"name":"亀甲蔵大吟醸","kana_name":"きっこうぐらだいぎんじょう"},
       {"name":"寳川","kana_name":"たからがわ"},
-      {"name":"七年貯熟古酒","kana_name":"しちねんちょじゅくこしゅ"}
-    ]},
+      {"name":"七年貯熟古酒","kana_name":"しちねんちょじゅくこしゅ"}]},
     {"campany":"男山","city":"旭川市", "details":[
-    {"campany":"男山","city":"旭川市", "details":[
-    {"campany":"男山","city":"旭川市", "details":[
-    {"campany":"男山","city":"旭川市", "details":[
-    {"campany":"男山","city":"旭川市", "details":[
-    {"campany":"男山","city":"旭川市", "details":[
-      {"name":"男山","kana_name":"おとこやま"}
-    ]},
+      {"name":"男山","kana_name":"おとこやま"}]},
     {"campany":"高砂酒造","city":"旭川市", "details":[
-    {"campany":"高砂酒造","city":"旭川市", "details":[
-    {"campany":"高砂酒造","city":"旭川市", "details":[
-    {"campany":"高砂酒造","city":"旭川市", "details":[
-    {"campany":"高砂酒造","city":"旭川市", "details":[
-    {"campany":"高砂酒造","city":"旭川市", "details":[
-      {"name":"国士無双","kana_name":"こくしむそう"}
-    ]},
-    {"campany":"合同酒精旭川工場","city":"旭川市", "details":[
-    {"campany":"合同酒精旭川工場","city":"旭川市", "details":[
-    {"campany":"合同酒精旭川工場","city":"旭川市", "details":[
-    {"campany":"合同酒精旭川工場","city":"旭川市", "details":[
-    {"campany":"合同酒精旭川工場","city":"旭川市", "details":[
+      {"name":"国士無双","kana_name":"こくしむそう"}]},
     {"campany":"合同酒精旭川工場","city":"旭川市", "details":[
       {"name":"大雪乃蔵","kana_name":"たいせつのくら"},
-      {"name":"北の誉","kana_name":"きたのほまれ"}
-    ]},
-    {"campany":"小林酒造","city":"夕張郡栗山町", "details":[
-    {"campany":"小林酒造","city":"夕張郡栗山町", "details":[
-    {"campany":"小林酒造","city":"夕張郡栗山町", "details":[
-    {"campany":"小林酒造","city":"夕張郡栗山町", "details":[
-    {"campany":"小林酒造","city":"夕張郡栗山町", "details":[
+      {"name":"北の誉","kana_name":"きたのほまれ"}]},
     {"campany":"小林酒造","city":"夕張郡栗山町", "details":[
       {"name":"北の錦","kana_name":"きたのにしき"},
       {"name":"北のろまん","kana_name":"きたのろまん"},
@@ -43,22 +19,10 @@
       {"name":"北斗随想","kana_name":"ほくとずいそう"},
       {"name":"北海二七八","kana_name":"ほっかいにーななはち"},
       {"name":"まる田","kana_name":"まるた"},
-      {"name":"雪晒","kana_name":"ゆきさらし"}
-    ]},
-    {"campany":"株式会社江別商会","city":"江別市", "details":[
-    {"campany":"株式会社江別商会","city":"江別市", "details":[
-    {"campany":"株式会社江別商会","city":"江別市", "details":[
-    {"campany":"株式会社江別商会","city":"江別市", "details":[
-    {"campany":"株式会社江別商会","city":"江別市", "details":[
+      {"name":"雪晒","kana_name":"ゆきさらし"}]},
     {"campany":"株式会社江別商会","city":"江別市", "details":[
       {"name":"江別の詩","kana_name":"えべつのうた"},
-      {"name": "ななかまど", "kana_name":"ななかまど"}
-    ]},
-    {"campany":"金滴酒造","city":"樺戸郡新十津川町", "details":[
-    {"campany":"金滴酒造","city":"樺戸郡新十津川町", "details":[
-    {"campany":"金滴酒造","city":"樺戸郡新十津川町", "details":[
-    {"campany":"金滴酒造","city":"樺戸郡新十津川町", "details":[
-    {"campany":"金滴酒造","city":"樺戸郡新十津川町", "details":[
+      {"name": "ななかまど", "kana_name":"ななかまど"}]},
     {"campany":"金滴酒造","city":"樺戸郡新十津川町", "details":[
       {"name":"おのらの酒","kana_name":"おのらのさけ"},
       {"name":"北の微笑","kana_name":"きたのほほえみ"},
@@ -75,24 +39,15 @@
       {"name":"夢滴","kana_name":"ゆめしずく"}
     ]},
     {"campany":"碓氷勝三郎商店","city":"根室市", "details":[
-    {"campany":"碓氷勝三郎商店","city":"根室市", "details":[
-    {"campany":"碓氷勝三郎商店","city":"根室市", "details":[
-    {"campany":"碓氷勝三郎商店","city":"根室市", "details":[
-    {"campany":"碓氷勝三郎商店","city":"根室市", "details":[
-    {"campany":"碓氷勝三郎商店","city":"根室市", "details":[
-      {"name":"北の勝","kana_name":"きたのかつ"}
-    ]},
+      {"name":"北の勝","kana_name":"きたのかつ"}]},
     {"campany":"國稀酒造","city":"増毛町", "details":[
       {"name":"國稀","kana_name":"くにまれ"},
       {"name":"北海鬼ころし","kana_name":"ほっかいおにころし"},
-      {"name":"雪のかおり","kana_name":"ゆきのかおり"}
-    ]},
+      {"name":"雪のかおり","kana_name":"ゆきのかおり"}]},
     {"campany":"日本清酒","city":"札幌市", "details":[
-      {"name":"千歳鶴","kana_name":"ちとせつる"}
-    ]},
+      {"name":"千歳鶴","kana_name":"ちとせつる"}]},
     {"campany":"二世古酒造","city":"倶知安町", "details":[
-      {"name":"二世古","kana_name":"にせこ"}
-    ]},
+      {"name":"二世古","kana_name":"にせこ"}]},
     {"campany":"福司酒造","city":"釧路市", "details":[
       {"name":"福司","kana_name":"ふくつかさ"},
       {"name":"海底力","kana_name":"そこヂカラ"},
@@ -106,12 +61,10 @@
       {"name":"鮭ひれ酒","kana_name":"さけひれさけ"},
       {"name":"ポンエペレ","kana_name":"ポンエペレ"},
       {"name":"拾八","kana_name":"じゅうはち"},
-      {"name":"“く”しろうさぎ","kana_name":"“く”しろうさぎ"},
-      {"name":"鶴","kana_name":"つる"}
-    ]},
+      {"name":"“く”しろうさぎ","kana_name":"くしろうさぎ"},
+      {"name":"鶴","kana_name":"つる"}]},
     {"campany":"山田酒造","city":"北見市", "details":[
-      {"name":"摩周","kana_name":"ましゅう"}
-      ]},
+      {"name":"摩周","kana_name":"ましゅう"}]},
   ]},
   {"name":"青森県","city_r":[
     {"company":"六花酒造","city":"弘前市", "details":[
